@@ -1,0 +1,104 @@
+MANIPAL INSTITUTE OF TECHNOLOGY
+MANIPAL
+(A Constituent Unit of MAHE, Manipal)
+
+Project Synopsis On
+Design and Implementation of Polar Encoder and Decoder for Reliable Digital Communication Systems
+
+MASTER OF TECHNOLOGY
+IN
+Digital Electronics and Communication
+
+Submitted by,
+Harshith Gowda B V
+(Reg No: [your reg no])
+
+Under the Guidance of,
+[Internal Guide Name]
+Department of ECE
+MIT, Manipal
+
+Bharat Electronics Limited (BEL)
+Place of Execution
+
+ABSTRACT
+With the increasing demand for high data rates and reliable communication in modern wireless systems, advanced channel coding techniques have become essential. Polar codes, introduced by Erdal Arıkan, are the first class of error-correcting codes proven to achieve channel capacity for symmetric binary-input discrete memoryless channels. Due to their capacity-achieving property and low-complexity decoding algorithms, polar codes have been adopted in the 5G New Radio (NR) standard for control channel communications.
+
+This project focuses on the design, implementation, and performance evaluation of a Polar Encoder and Decoder, emphasizing Successive Cancellation (SC) and Successive Cancellation List (SCL) decoding techniques. The work involves understanding the theoretical foundation of channel polarization, frozen and information bit selection, and bit-reversal operations involved in polar encoding. The encoder is implemented using the recursive generator matrix structure, while the decoder is realized using LLR-based SC and SCL algorithms.
+
+Simulation studies are carried out over both noiseless and noisy channels (AWGN) to analyze bit error rate (BER) performance under different signal-to-noise ratio conditions. The project aims to bridge the gap between theoretical concepts and practical realization, providing insights into decoder complexity, latency, and reliability. The outcomes of this work are relevant to defense and communication systems developed at BEL, where robust and efficient error correction is a critical requirement.
+
+INTRODUCTION
+Background
+Reliable data transmission is a fundamental requirement in digital communication systems, especially in applications involving defense, satellite, and wireless communication. Channel coding plays a vital role in protecting transmitted information against noise and interference. Over the years, several coding schemes such as convolutional codes, Turbo codes, and LDPC codes have been developed to improve communication reliability.
+
+Polar codes represent a major breakthrough in coding theory by achieving channel capacity with low encoding and decoding complexity. The principle of channel polarization transforms a set of identical communication channels into a combination of highly reliable and highly unreliable channels. Information bits are transmitted over reliable channels, while unreliable channels are assigned fixed (frozen) values.
+
+Motivation
+Despite their theoretical advantages, the practical implementation of polar decoders—especially list-based decoding—poses challenges related to algorithmic complexity, memory management, and decoding latency. For mission-critical systems such as those developed at BEL, understanding the complete encoder–decoder chain and its performance under realistic channel conditions is essential. This project is motivated by the need to develop a clear, verifiable, and modular implementation of polar encoding and decoding, suitable for both simulation and potential hardware realization.
+
+Relevance
+Polar codes are already standardized in 5G and are of growing interest in defense and aerospace communication systems. The project aligns well with industrial requirements, providing hands-on exposure to modern coding techniques, decoder algorithms, and system-level performance evaluation.
+
+PROBLEM DEFINITION
+The primary challenge addressed in this project is the accurate implementation and validation of polar encoding and decoding algorithms for finite block lengths under practical channel conditions. While theoretical descriptions of polar codes exist, incorrect handling of bit-reversal ordering, frozen-bit selection, and decoding recursion can lead to performance degradation or incorrect decoding.
+
+The project aims to design a fully functional Polar Encoder and Decoder that correctly follows polar code construction rules and decoding logic. Both SC and SCL decoding are analyzed to study the trade-off between decoding complexity and error-rate performance. The system is evaluated under noiseless and noisy channels to ensure correctness and robustness.
+
+OBJECTIVES
+The key objectives of the project are:
+
+To study the theoretical foundations of polar codes and channel polarization.
+
+To implement a polar encoder using recursive generator matrix / butterfly structure.
+
+To design and validate SC and SCL decoding algorithms using LLR-based recursion.
+
+To analyze BER performance under noiseless and AWGN channel conditions.
+
+To compare decoding performance for different list sizes in SCL decoding.
+
+To gain practical exposure to channel coding techniques relevant to BEL systems.
+
+DELIVERABLES
+At the end of the project, the following outcomes are expected:
+
+Functional Polar Encoder Implementation
+Verified encoder supporting different block lengths and code rates.
+
+Polar Decoder Implementation
+Correct realization of SC and SCL decoding algorithms.
+
+Performance Evaluation
+BER vs. SNR plots for noiseless and noisy channels.
+
+Comparative Analysis
+Study of SC vs. SCL decoding performance and complexity.
+
+Technical Documentation
+Detailed project report explaining design methodology, algorithms, and results.
+
+KEY TOOLS / PLATFORMS
+MATLAB (Simulation and performance analysis)
+
+Theoretical models based on 5G NR polar code standards
+
+Optional scope for Verilog-based implementation (future extension)
+
+TENTATIVE TIMELINE
+Duration	Activity
+Month 1	Study of channel coding and polar code theory
+Month 2	Polar encoder implementation and verification
+Month 3	SC decoder implementation (noiseless & noisy)
+Month 4	SCL decoder implementation and optimization
+Month 5	Performance analysis and result validation
+Month 6	Documentation, review, and final submission
+REFERENCES
+E. Arıkan, “Channel Polarization: A Method for Constructing Capacity-Achieving Codes,” IEEE Transactions on Information Theory, 2009.
+
+Tal, I. and Vardy, A., “List Decoding of Polar Codes,” IEEE Transactions on Information Theory, 2015.
+
+3GPP TS 38.212 – NR Multiplexing and Channel Coding.
+
+Vangala, H., Viterbo, E., and Hong, Y., “A Comparative Study of Polar Code Constructions,” IEEE Access.
+
